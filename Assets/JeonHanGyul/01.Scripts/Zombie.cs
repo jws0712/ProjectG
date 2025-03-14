@@ -40,7 +40,7 @@ public class Zombie : MonoBehaviour
     private void SpawnBloodEffect(Vector3 position, Vector3 normal)
     {
         // 프리팹에서 파티클을 생성
-        GameObject bloodEffect = Instantiate(bloodEffectPrefab, position, Quaternion.LookRotation(normal));
+        GameObject bloodEffect = Instantiate(bloodEffectPrefab, position, Quaternion.LookRotation(normal), transform);
 
         // 파티클이 끝나면 자동으로 삭제
         ParticleSystem particle = bloodEffect.GetComponent<ParticleSystem>();
